@@ -17,10 +17,13 @@ mongoose
     console.log(err);
   });
 
+app.get("", (req, res) => {
+  res.status(200).json({
+    status: " Api is Working",
+  });
+});
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/post", postRoute);
 
-app.listen(3000, () => {
-  console.log("Backend Server Is Running Port 3000");
-});
+module.exports = app;
