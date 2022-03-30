@@ -18,7 +18,9 @@ mongoose
   });
 
 app.get("", (req, res) => {
-  res.send("Api is working");
+  res.send(
+    "Api is working \n getRequest for post => https://blogrestapi152.herokuapp.com/api/post "
+  );
 });
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
