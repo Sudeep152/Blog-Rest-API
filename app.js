@@ -18,9 +18,7 @@ mongoose
   });
 
 app.get("", (req, res) => {
-  res.status(200).json({
-    status: " Api is Working",
-  });
+  res.send("Api is working");
 });
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
